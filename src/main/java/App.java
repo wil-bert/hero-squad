@@ -64,7 +64,7 @@ public class App {
         post("/squad/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             String SquadName = request.queryParams("SquadName");
-            Integer size = Integer.parseInt(request.queryParams("size"));
+            int size = Integer.parseInt(request.queryParams("size"));
             String cause = request.queryParams("cause");
             Squad newSquad = new Squad(SquadName, size, cause);
             request.session().attribute("item", SquadName);
