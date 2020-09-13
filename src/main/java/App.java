@@ -14,7 +14,7 @@ import static spark.Spark.*;
 public class App {
     public static  void main(String[] args) {
         ProcessBuilder process = new ProcessBuilder();
-        Integer port;
+        int port;
 
         if (process.environment().get("PORT") != null) {
             port = Integer.parseInt(process.environment().get("PORT"));
@@ -53,7 +53,7 @@ public class App {
         get("/squad", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             ArrayList<Squad> squads = Squad.getInstances();
-            model.put("heroes", squads);
+            model.put("squads", squads);
             ArrayList<Hero> members = Hero.getAllInstances();
             model.put("heroes", members);
             Squad newSquad = Squad.findBySquadId(1);
