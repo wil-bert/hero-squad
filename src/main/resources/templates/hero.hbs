@@ -1,14 +1,10 @@
 {{#partial "content"}}
-    <section class="landing-pg">
-        <div class="land-left">
-        </div>
-        <div class="land-right">
-        </div>
-        <h2> <a class="btns" href="/hero-form" >Create Your Hero</a> <br><br> CURRENT HEROES</h2>
-        <div class="heroes">
-            {{#each hero}}
+    <div class="Hero">
+
+                <h2> <a class="btns" href="/hero-form" >Create Your Hero</a> <br><br> CURRENT HEROES</h2>
+                <div class="heroes">
+                    {{#each hero}}
                 <div class="hero-item">
-                    <img src="/img/wakanda.jpg" alt="">
                     <p>Name: {{ name }} </p>
                     <p>Age: {{ age }}</p>
                     <p>Special power: {{ power }}</p>
@@ -19,7 +15,7 @@
                 </div>
 
             {{/each}}
-        </div>
-    </section>
+                </div>
+    </div>
 {{/partial}}
 {{> layout.hbs}}

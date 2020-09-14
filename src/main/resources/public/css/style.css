@@ -1,4 +1,262 @@
 @import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
+/*hero*/
+.hero-desc{
+color: white;
+align-item: center;
+justify-content: center;
+background-image: url('/img/venom.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+width: 100%;
+}
+hero-desc h2{
+padding-lef:50px;
+}
+.hero-btn{
+  background: rgb(11, 68, 35);
+  color: white;
+  width: 60%;
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  cursor: pointer;
+  font-family: 'Abel', sans-serif;
+  font-size: 25px;
+  outline: none;
+  z-index: 5;
+}
+.Hero{
+background-color: black;
+color: white;
+text-align: center;
+font-family: 'Abel', sans-serif;
+}
+.Hero h2{
+text-align: center;
+}
+.hero-item{
+  width: 500px;
+  max-width: 90%;
+  margin: 2% 3%;
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  padding: 10px;
+  padding-left: 60px;
+  box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.068);
+  background-image: url('/img/wakanda.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width:50%;
+}
+.hero-item button{
+  background: rgb(6, 70, 6);
+  padding: 5px 20px;
+  position: relative;
+  right: -20%;
+  color: white;
+}
+/*hero form*/
+.heroform{
+background-image: url(/img/squad.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+text-align: center;
+color: white;
+justify-content: center;
+padding-left:400px;
+padding-top: 20px;
+}
+.form{
+width: 500px;
+background-color: transparent;
+}
+.form h1{
+font-size: 60px;
+}
+.form input[type=submit]{
+  margin-top: 10px;
+  background: rgb(17, 54, 17);
+  width: 100%;
+  padding: 5px;
+  color: white;
+  font-size: 20px
+}
+/*squad*/
+.squad{
+  z-index: 4;
+  position: relative;
+  width: 100%;
+  background-color: black;
+  justify-content: space-around;
+  text-align: center;
+  flex-wrap: wrap;
+  font-family: 'Abel', sans-serif;
+  font-size: 0.9em;
+}
+#newMember{
+  width: 100%;
+  position: absolute;
+	overflow: auto;
+  left: -100%;
+  height: 85vh;
+  background: rgb(0, 0, 0);
+  z-index: 1000;
+  text-align: center;
+}
+#newMember>p{
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  font-size: 35px;
+  color: red;
+  cursor: pointer;
+}
+.squad>div:nth-child(even){
+	animation: load 1s linear 1;
+}
+.squad-cont{
+  position: relative;
+  display: inline-block;
+  color: white;
+  width: 500px;
+  max-width: 90%;
+  margin: 1% 2.5%;
+  padding: 20px;
+  background: rgb(2, 2, 2);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: left;
+  transition: all 2s ease;
+  animation: load1 0.5s linear 1;
+}
+.add-btn{
+  background: green;
+  display: inline-block;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+/*squad form*/
+.squadform{
+background-image: url(/img/squad.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+text-align: center;
+color: white;
+justify-content: center;
+padding-left:400px;
+padding-top: 20px;
+}
+.form{
+width: 500px;
+background-color: transparent;
+}
+.form h1{
+font-size: 60px;
+}
+.form input[type=submit]{
+  margin-top: 10px;
+  background: rgb(17, 54, 17);
+  width: 100%;
+  padding: 5px;
+  color: white;
+  font-size: 20px
+}
+.member-cont{
+  /* background: rgba(255, 255, 255, 0.103); */
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+.member-cont h3{
+  display: inline-block;
+}
+.member-cont .btns{
+  position: relative;
+  left: 15%;
+  padding: 2px 20px;
+}
+/*success*/
+.successs{
+background: black;
+justify-content: center;
+align-item: center;
+}
+.success{
+  position: absolute;
+  padding: 20px;
+  padding-left: 50px;
+  z-index: 4;
+  background: black;
+  width: 70%;
+  color: white;
+  min-height: 100px;
+  margin-top: 20vh;
+  margin-left: 20wh;
+  transform: all 2s ease;
+  text-align: center;
+  animation: successColor 1s linear 1;
+}
+.success h3 span{
+  color: rgb(123, 255, 0);
+}
+@keyframes successColor{
+  0%{
+    background: rgb(22, 54, 0);
+    color: rgb(22, 54, 0);
+  }
+  90%{
+    background: rgb(22, 54, 0);
+    color: rgb(22, 54, 0);
+  }
+}
+.success::after,
+.success::before{
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  border: 5px solid rgb(25, 59, 25);
+  height: 100%;
+  animation: success 0.7s linear 1;
+}
+.success::before{
+  right: 100%;
+  animation: success1 0.7s linear 1;
+}
+@keyframes success{
+  0%{right: 100%;transform: rotate(270deg);}
+}
+@keyframes success1{
+  0%{right: 0px;transform: rotate(-270deg);}
+}
+
+@media only screen and (max-width: 700px){
+	.hero-img{
+		width: 100%;
+	}
+
+	.hero-desc{
+		width: 90%;
+		margin: 0px;
+		margin-top: -50%;
+	}
+
+}
+/*
+@import url('https://fonts.googleapis.com/css?family=Abel&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -41,9 +299,11 @@ html{
   scroll-behavior: smooth;
 }
 
+*/
 /*------------------------------------
 			SCROLL BAR
----------------------------------------*/
+---------------------------------------*//*
+
 body::-webkit-scrollbar,
  #newMember::-webkit-scrollbar{
   width: 5px;
@@ -54,13 +314,20 @@ body::-webkit-scrollbar-thumb,
   background-color: rgb(48, 116, 52);
   border-radius: 30px;
 }
+#two{
+background-img: url('img/squad.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+
+}
 .landing-pg{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-item: center;
   margin-top: 15vh;
   min-height: 10vh;
-  background: rgb(8, 22, 8);
+  background: rgb(0, 0, 0);
   color: white;
   box-shadow: 0 0 10px rgba(255,255,255,0.4);
 }
@@ -70,37 +337,9 @@ body::-webkit-scrollbar-thumb,
 	padding: 40px 0;
 }
 .landing-pg h2 a{
-	background: green;
+	background: black;
 	color: white;
 	border-radius: 20px;
-}
-.land-left,
-.land-right{
-  position: fixed;
-  right: 0px;
-  top: 0vh;
-  width: 50%;
-  height: 100vh;
-  background: rgb(8, 22, 8);
-  z-index: 2;
-}
-.land-left{
-  left: 0px;
-  background: rgb(0, 0, 0);
-}
-.hero-img{
-  position: relative;
-  z-index: 10;
-  width: 40%;
-  left: 0px;
-  margin-top: 5vh;
-  height: 70vh;
-  overflow: hidden;
-  background: url('/img/venom.jpg');
-  background-position: top center;
-  background-repeat: no-repeat;
-  box-shadow: 0 0 20px rgb(24, 44, 13);
-  animation: load1 0.8s linear 1;
 }
 .hero-desc{
   width: 40%;
@@ -116,14 +355,14 @@ body::-webkit-scrollbar-thumb,
   text-align: center;
   animation: load 1s linear 1;
 }
-.hero-desc>h3{
+.hero-desc>h2{
   font-size: 3.4em;
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
   width: 210px;
   display: inline-block;
   font-family: serif;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 .hero-btn{
   background: rgb(11, 68, 35);
@@ -172,9 +411,11 @@ body::-webkit-scrollbar-thumb,
   60%{box-shadow: 0px 0px 20px rgb(255, 255, 255)}
 }
 
+*/
 /*-----------------------------------
             HERO STATS
------------------------------------*/
+-----------------------------------*//*
+
 .hero-stats{
   width: 100%;
   z-index: 4;
@@ -214,9 +455,11 @@ body::-webkit-scrollbar-thumb,
 
 
 
+*/
 /*-----------------------------------
             HERO FORM
------------------------------------*/
+-----------------------------------*//*
+
 .form-cont{
   position: relative;
   width: 100%;
@@ -288,9 +531,11 @@ body::-webkit-scrollbar-thumb,
   color: rgb(124, 122, 122);
 }
 
+*/
 /*-----------------------------------
            SUCCESS
------------------------------------*/
+-----------------------------------*//*
+
 .success{
   position: absolute;
   padding: 20px;
@@ -337,9 +582,11 @@ body::-webkit-scrollbar-thumb,
   0%{right: 0px;transform: rotate(-270deg);}
 }
 
+*/
 /*--------------------------------------
 				HEROES
----------------------------------------*/
+---------------------------------------*//*
+
 .heroes{
   z-index: 4;
   font-family: 'Abel', sans-serif;
@@ -369,9 +616,7 @@ body::-webkit-scrollbar-thumb,
 .hero-item img{
 position: absolute;
   height: 70px;
-  background: rgb(9, 22, 13);
   display: block;
-  padding: 5px 13px;
   left: -20px;
   border-radius: 5px;
   z-index: 4;
@@ -398,9 +643,11 @@ position: absolute;
   color: white;
 }
 
+*/
 /*--------------------------------------------
             SQUAD CONTAINER
----------------------------------------------*/
+---------------------------------------------*//*
+
 .squad{
   z-index: 4;
   position: relative;
@@ -462,7 +709,9 @@ position: absolute;
   outline: none;
 }
 .member-cont{
-  /* background: rgba(255, 255, 255, 0.103); */
+  */
+/* background: rgba(255, 255, 255, 0.103); *//*
+
   padding: 10px;
   border-bottom: 1px solid;
 }
@@ -486,4 +735,4 @@ position: absolute;
 		margin-top: -50%;
 	}
 
-}
+}*/
